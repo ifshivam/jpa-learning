@@ -1,4 +1,4 @@
-//for single table strategy
+// for single table strategy
 package com.learning.jpa_learning.entity;
 
 import jakarta.persistence.*;
