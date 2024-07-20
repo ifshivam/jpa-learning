@@ -35,4 +35,18 @@ select * from bankcheck;
 drop table card;
 drop table bankcheck;
 drop table payment;
+-------------------------------------------
+--component mapping
+create table employee(
+id int primary key,
+name varchar(20),
+streetaddress varchar(20),
+city varchar(20),
+state varchar(20),
+zipcode varchar(20),
+country varchar(20)
+);
+select * from employee;
+drop table employee;
+
 
