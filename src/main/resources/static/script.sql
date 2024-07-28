@@ -86,6 +86,26 @@ select * from programmer;
 select * from project;
 select * from programmers_projects;
 
+----------------------------------------------------------
+--one to one mapping
+
+create table person(
+id int primary key auto_increment,
+first_name varchar(20),
+last_name varchar(20),
+age int
+);
+create table license(
+id int primary key auto_increment,
+type varchar(20),
+valid_from date,
+valid_to date,
+person_id int,
+foreign key (person_id) references person(id)
+);
+select * from person;
+select * from license;
+
 
 
 
