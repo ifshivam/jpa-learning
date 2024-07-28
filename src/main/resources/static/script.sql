@@ -49,4 +49,44 @@ country varchar(20)
 select * from employee;
 drop table employee;
 
+-------------------------------------------------
+-- one to one mapping
+create table customer(
+id int primary key auto_increment,
+name varchar(20)
+);
+create table phone_number(
+id int primary key auto_increment,
+customer_id int,
+number varchar(20),
+type varchar(20),
+foreign key (customer_id) references customer(id)
+);
+select * from customer;
+select * from phone_number;
+
+-------------------------------------------------------------
+--Many to Many Mapping
+create table programmer(
+id int primary key auto_increment,
+name varchar(20),
+salary int
+);
+create table project(
+id int primary key auto_increment,
+name varchar(20)
+);
+create table programmers_projects(
+programmer_id int,
+project_id int,
+foreign key (programmer_id) references programmer(id),
+foreign key(project_id) references project(id)
+);
+select * from programmer;
+select * from project;
+select * from programmers_projects;
+
+
+
+
 
